@@ -78,12 +78,12 @@ button:hover {
     background-color: #0056b3;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px ) {
     .container {
         padding: 10px;
     }
-    .invoice-details,
-    .invoice-date,
+    /* .invoice-details, */
+    /* .invoice-date, */
     .customer-info,
     .company-info,
     #itemsContainer,
@@ -92,6 +92,45 @@ button:hover {
     #totalAmount,
     #reviewInvoiceSection {
         width: 100%;
+    }
+    .invoice-date,
+    .invoice-details {
+        display: none;
+    }
+    .item-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .item-row > div {
+        padding: 5px;
+    }
+    input[type="text"],
+    input[type="number"] {
+        width: calc(100% - 10px);
+        margin-bottom: 5px;
+    }
+    button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+@media screen and (max-width: 830px ) {
+    .container {
+        padding: 10px;
+    }
+    /* .invoice-details, */
+    /* .invoice-date, */
+    .customer-info,
+    .company-info,
+    #itemsContainer,
+    .subtotal,
+    .tax,
+    #totalAmount,
+    #reviewInvoiceSection {
+        width: 100%;
+    }
+    .invoice-date,
+    .invoice-details {
+        display: none;
     }
     .item-row {
         grid-template-columns: repeat(1, 1fr);
