@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Invoice Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Company Invoice Generator</h1>
+        <div class="invoice-details">
+            <h2>Invoice number</h2>
+            <input type="text" id="invoiceNumber" placeholder="1">
+        </div>
+        <div class="invoice-date">
+            <input type="date" id="currentDate" placeholder="Current Date">
+            <br>
+            <input type="date" id="dueDate" placeholder="Due Date">
+        </div>
+        <div class="customer-info">
+            <h2>Bill To :</h2>
+            <input type="text" id="customerName" placeholder="Who is the invoice to?">
+            <br>
+            <input type="text" id="customerMail" placeholder="Email address">
+            <br>
+            <input type="text" id="customerAddress" placeholder="Billing address">
+        </div>
+        <div class="company-info">
+            <h2>Bill From :</h2>
+            <input type="text" id="companyName" placeholder="Who is the invoice from?">
+            <br>
+            <input type="text" id="companyMail" placeholder="Email address">
+            <br>
+            <input type="text" id="companyAddress" placeholder="Billing address">
+        </div>
+        <div id="itemsContainer">
+            <h2>Invoice Items</h2>
+            <div class="item-row header">
+                <div>Description</div>
+                <div>Quantity</div>
+                <div>Price/Rate</div>
+                <div>Action</div>
+                <div>Subtotal</div>
+            </div>
+        </div>
+        <button id="addItemBtn">Add Item</button>
+        <div class="subtotal">Subtotal: <span id="subtotalAmount">$0.00</span></div>
+        <input type="number" id="discountInput" placeholder="Discount (%)">
+        <div class="tax">Tax: <span id="taxAmount">$0.00</span></div>
+        <button id="calculateTotalBtn">Calculate Total</button>
+        <h2 id="totalAmount">Total: $0.00</h2>
+
+        <button id="reviewInvoiceBtn">Review Invoice</button>
+        <div id="reviewInvoiceSection" style="display: none;">
+            <button id="sendInvoiceBtn">Send Invoice</button>
+            <button id="downloadCopyBtn">Download Copy</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
